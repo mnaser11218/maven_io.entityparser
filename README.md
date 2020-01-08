@@ -6,7 +6,19 @@
     * View `src.main.resources` directory to view each of the text files being read in.
     * Ensure that all test cases in `com.github.curriculeon` pass with 100% success rate. 
 
+## Recommended Order of Completion:
+### Part 0 - `FileReader`
+* `FileReaser.toString()`
 
+### Part 2 - `PersonParser`
+* `PersonParser.parseString(String): Person`
+* `PersonParser.parseStrings(String[]): Person[]`
+* `PersonParser.parseFile(File): Person[]`
+
+### Part 2 - `PetParser`
+* `PetParser.parseString(String): Pet`
+* `PetParser.parseStrings(String[]): Pet[]`
+* `PetParser.parseFile(File): Pet[]`
 
 
 ## How to Download
