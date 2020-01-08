@@ -1,4 +1,4 @@
-# Project Title
+# Entity Parser
 
 * **Objective** - To create a `Parser` which can parse `String` and `File` to derive and return a specific object-type.
 * **Purpose** - To gain familiarity with reading and parsing from Files.
