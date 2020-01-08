@@ -17,18 +17,7 @@ public class FileReader {
 
     @Override
     public String toString(){
-        ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource(filename).getFile());
-        StringBuilder result = new StringBuilder();
-        try(Scanner scanner = new Scanner(file)){
-            while(scanner.hasNextLine()){
-                String line = scanner.nextLine();
-                result.append(line).append("\n");
-            }
-        }catch(IOException e){
-            throw new Error(e);
-        }
-        return result.toString();
+        return null;
     }
 
 }
