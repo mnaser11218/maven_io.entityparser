@@ -100,7 +100,7 @@ public class ParseStringsTest {
                 .add(dateString2)
                 .toString();
 
-        String[] dataArray = {data0, data1};
+        String[] dataArray = {data0, data1, data2};
         Pet pet0 = new Pet(id0, name0, DateParser.parseDate(dateString0));
         Pet pet1 = new Pet(id1, name1, DateParser.parseDate(dateString1));
         Pet pet2 = new Pet(id2, name2, DateParser.parseDate(dateString2));
