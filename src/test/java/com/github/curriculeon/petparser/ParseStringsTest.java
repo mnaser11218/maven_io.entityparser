@@ -55,9 +55,9 @@ public class ParseStringsTest {
         String name1 = "Goliath the Golem";
         String dateString1 = "0-0-0";
         String data1 = new StringJoiner("\n")
-                .add(id0.toString())
-                .add(name0)
-                .add(dateString0)
+                .add(id1.toString())
+                .add(name1)
+                .add(dateString1)
                 .toString();
 
         String[] dataArray = {data0, data1};
@@ -85,9 +85,9 @@ public class ParseStringsTest {
         String name1 = "Goliath the Golem";
         String dateString1 = "0-0-0";
         String data1 = new StringJoiner("\n")
-                .add(id0.toString())
-                .add(name0)
-                .add(dateString0)
+                .add(id1.toString())
+                .add(name1)
+                .add(dateString1)
                 .toString();
 
 
@@ -95,9 +95,9 @@ public class ParseStringsTest {
         String name2 = "Nikola the Electrobuzz";
         String dateString2 = "06-10-1856";
         String data2 = new StringJoiner("\n")
-                .add(id0.toString())
-                .add(name0)
-                .add(dateString0)
+                .add(id2.toString())
+                .add(name2)
+                .add(dateString2)
                 .toString();
 
         String[] dataArray = {data0, data1};
