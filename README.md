@@ -8,7 +8,7 @@
 
 ## Recommended Order of Completion:
 ### Part 0 - `FileReader`
-* `FileReaser.toString()`
+* `FileReader.toString()`
 
 ### Part 1 - `PersonParser`
 * `PersonParser.parseString(String): Person`
