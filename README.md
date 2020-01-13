@@ -10,7 +10,7 @@
 ### Part 0 - `FileReader`
 * `FileReaser.toString()`
 
-### Part 2 - `PersonParser`
+### Part 1 - `PersonParser`
 * `PersonParser.parseString(String): Person`
 * `PersonParser.parseStrings(String[]): Person[]`
 * `PersonParser.parseFile(File): Person[]`
