@@ -2,6 +2,7 @@ package com.github.curriculeon;
 import com.github.curriculeon.*;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -31,11 +32,32 @@ public class PetParser implements Parser<Pet> {
 
     @Override
     public Pet[] parseStrings(String[] data) {
-        return new Pet[0];
+        Pet [] results = new Pet[data.length];
+
+        for(int i=0; i<data.length; i++){
+            results[i]= parseString(data[i]);
+        }
+        return results;
     }
 
     @Override
     public Pet[] parseFile(File data) {
-        return new Pet[0];
+        try{
+            FileInputStream filereader= new FileInputStream(data);
+            int i;
+            String results  ="";
+            while((i=filereader.read()) != -1){
+                results += (char) i;
+            }
+            String normalizedStr2 = results.replaceAll("\\r\\n", "\n");
+
+            String fileString = normalizedStr2.toString();
+            System.out.println(fileString);
+            return new Pet[]{parseString(fileString)};
+
+        }catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
+
 }

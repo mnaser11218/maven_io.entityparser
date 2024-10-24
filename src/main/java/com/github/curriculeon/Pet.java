@@ -53,13 +53,6 @@ public class Pet {
                 '}';
     }
 
-//    @Override
-//    public boolean equals(Object objectToCompareAgainst) {
-//        Person personToCompareAgainst = (Person)objectToCompareAgainst;
-//        String personCurrentState = personToCompareAgainst.toString();
-//        String thisPersonCurrentState = this.toString();
-//        return personCurrentState.equals(thisPersonCurrentState);
-//    }
 
     @Override
     public boolean equals(Object o) {

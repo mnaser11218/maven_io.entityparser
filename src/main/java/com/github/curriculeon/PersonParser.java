@@ -1,6 +1,9 @@
 package com.github.curriculeon;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 /**
  * Created by leon on 1/8/2020.
@@ -25,6 +28,21 @@ public class PersonParser implements Parser<Person> {
 
     @Override
     public Person[] parseFile(File data) {
-        return new Person[0];
+        try{
+        FileInputStream filereader= new FileInputStream(data);
+            int i;
+            String results  ="";
+            while((i=filereader.read()) != -1){
+                results += (char) i;
+            }
+            String normalizedStr2 = results.replaceAll("\\r\\n", "\n");
+
+           String fileString = normalizedStr2.toString();
+            System.out.println(fileString);
+            return new Person[]{parseString(fileString)};
+
+        }catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
