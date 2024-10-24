@@ -38,7 +38,6 @@ public class FileReader {
                 results += (char) i;
             }
                 System.out.println(results);
-           // String file = filereader.read();
      String normalizedStr2 = results.replaceAll("\\r\\n", "\n");
 
                 return normalizedStr2.toString();

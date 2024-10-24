@@ -27,7 +27,7 @@ public class ParseFileTest {
     public void test0() {
         Person person = new Person(0L, "leon", "hunter");
         Person[] expectedPersons = new Person[]{person};
-        String filePath = "/anthropoid/leon.person";
+        String filePath = "src/main/resources/anthropoid/leon.person";
         File fileOfData = new File(filePath);
         test(fileOfData, expectedPersons);
     }
@@ -36,7 +36,7 @@ public class ParseFileTest {
     public void test1() {
         Person person = new Person(1L, "bezawit", "maine");
         Person[] expectedPersons = new Person[]{person};
-        String filePath = "/anthropoid/bezawit.person";
+        String filePath = "src/main/resources/anthropoid/bezawit.person";
         File fileOfData = new File(filePath);
         test(fileOfData, expectedPersons);
     }
@@ -45,7 +45,7 @@ public class ParseFileTest {
     public void test2() {
         Person person = new Person(2L, "ali", "hyman");
         Person[] expectedPersons = new Person[]{person};
-        String filePath = "/anthropoid/ali.person";
+        String filePath = "src/main/resources/anthropoid/ali.person";
         File fileOfData = new File(filePath);
         test(fileOfData, expectedPersons);
     }
@@ -57,7 +57,7 @@ public class ParseFileTest {
         Person person2 = new Person(2L, "ali", "hyman");
         Person[] expectedPersons = new Person[]{person0, person1, person2};
         
-        String filePath = "/anthropoid/allstaff.people";
+        String filePath = "src/main/resources/anthropoid/allstaff.people";
         File fileOfData = new File(filePath);
         test(fileOfData, expectedPersons);
         

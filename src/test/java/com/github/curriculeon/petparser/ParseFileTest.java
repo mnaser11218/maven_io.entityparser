@@ -37,7 +37,7 @@ public class ParseFileTest {
         Date date = DateParser.parseDate("06-14-2015");
         Pet pet = new Pet(id, name, date);
         Pet[] expected = new Pet[]{pet};
-        String filePath = "/creature/milo.pet";
+        String filePath = "src/main/resources/creature/milo.pet";
         File fileOfData = new File(filePath);
         
         test(fileOfData, expected);
@@ -51,7 +51,7 @@ public class ParseFileTest {
         Date date = DateParser.parseDate("09-07-2007");
         Pet pet = new Pet(id, name, date);
         Pet[] expected = new Pet[]{pet};
-        String filePath = "/creature/sam.pet";
+        String filePath = "src/main/resources/creature/sam.pet";
         File fileOfData = new File(filePath);
 
         test(fileOfData, expected);
@@ -65,7 +65,7 @@ public class ParseFileTest {
         Date date = DateParser.parseDate("01-01-2005");
         Pet pet = new Pet(id, name, date);
         Pet[] expected = new Pet[]{pet};
-        String filePath = "/creature/zula.pet";
+        String filePath = "src/main/resources/creature/zula.pet";
         File fileOfData = new File(filePath);
 
         test(fileOfData, expected);
@@ -93,7 +93,7 @@ public class ParseFileTest {
         
         Pet[] expected = new Pet[]{pet1, pet2, pet3};
         
-        String filePath = "/creature/allpet.pets";
+        String filePath = "src/main/resources/creature/allpet.pets";
         File fileOfData = new File(filePath);
 
         test(fileOfData, expected);
