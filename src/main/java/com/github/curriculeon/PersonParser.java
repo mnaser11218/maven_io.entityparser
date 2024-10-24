@@ -16,7 +16,12 @@ public class PersonParser implements Parser<Person> {
 
     @Override
     public Person[] parseStrings(String[] data) {
-        return new Person[0];
+        Person [] results = new Person[data.length];
+
+        for(int i=0; i<data.length; i++){
+            results[i]= parseString(data[i]);
+        }
+        return results;
     }
 
     @Override
