@@ -8,7 +8,10 @@ import java.io.File;
 public class PersonParser implements Parser<Person> {
     @Override
     public Person parseString(String data) {
-        return null;
+        String[] dataArray = data.split("\n");
+        Person person = new Person(Long.parseLong(dataArray[0],10),dataArray[1], dataArray[2]);
+        System.out.println("data: ");
+        return person;
     }
 
     @Override
