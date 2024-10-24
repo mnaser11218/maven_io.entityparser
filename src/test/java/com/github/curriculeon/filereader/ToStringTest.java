@@ -4,6 +4,7 @@ import com.github.curriculeon.FileReader;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.FileNotFoundException;
 import java.util.StringJoiner;
 
 /**
@@ -11,7 +12,7 @@ import java.util.StringJoiner;
  */
 public class ToStringTest {
     // given
-    private void test(String filePath, String expectedContent) {
+    private void test(String filePath, String expectedContent) throws FileNotFoundException {
         FileReader fileReader = new FileReader(filePath);
 
         // when
@@ -22,23 +23,23 @@ public class ToStringTest {
     }
 
     @Test
-    public void test0() {
-        test("/anthropoid/leon.person", "0\nleon\nhunter");
+    public void test0() throws FileNotFoundException {
+        test("src/main/resources/anthropoid/leon.person", "0\nleon\nhunter");
     }
 
     @Test
-    public void test1() {
-        test("/anthropoid/bezawit.person", "1\nbezawit\nmaine");
+    public void test1() throws FileNotFoundException {
+        test("src/main/resources/anthropoid/bezawit.person", "1\nbezawit\nmaine");
     }
 
     @Test
-    public void test2() {
-        test("/anthropoid/ali.person", "2\nali\nhyman");
+    public void test2() throws FileNotFoundException {
+        test("src/main/resources/anthropoid/ali.person", "2\nali\nhyman");
     }
 
     @Test
-    public void test3() {
-        test("/anthropoid/allstaff.people", new StringJoiner("\n")
+    public void test3() throws FileNotFoundException {
+        test("src/main/resources/anthropoid/allstaff.people", new StringJoiner("\n")
                 .add("0\nleon\nhunter")
                 .add("1\nbezawit\nmaine")
                 .add("2\nali\nhyman")
