@@ -31,7 +31,12 @@ public class PetParser implements Parser<Pet> {
 
     @Override
     public Pet[] parseStrings(String[] data) {
-        return new Pet[0];
+        Pet [] results = new Pet[data.length];
+
+        for(int i=0; i<data.length; i++){
+            results[i]= parseString(data[i]);
+        }
+        return results;
     }
 
     @Override
