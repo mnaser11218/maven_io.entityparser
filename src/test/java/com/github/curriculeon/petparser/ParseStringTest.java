@@ -66,6 +66,7 @@ public class ParseStringTest {
                 .toString();
 
         Pet expected = new Pet(id, name, DateParser.parseDate(dateString));
+
         test(data, expected);
     }
 }
